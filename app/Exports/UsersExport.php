@@ -183,37 +183,12 @@ class UsersExport implements FromCollection,WithHeadings
             'social_status.hhh_vege')
         ->get();
         
-        /*
-        ->where('szuletesi_hely', $request->szuletesi_hely , 'or',
-             'allando_lakcim_telepules', $request->allando_lakcim_telepules, 'or',
-             'kozoktatasi_intezmeny_neve', $request->kozoktatasi_intezmeny_neve )
-        ->get();
-        */
-        //$Family_res = Familydata::all();
-        //$Social_res = Socialstatus::all();
-        //$ResultArray = ($Master_res $Family_res $Social_res); //, $Family_res, $Social_res];
+        
         
         return $Master_res;
 
-        //return Masterdata::all();
         
-        
-        
-        //$tables='SELECT * FROM masterdata inner join familydata on masterdata.oktazon = familydata.oktazon';
-        //return $tables::all();
-        /*$shares = DB::table('masterdata')
-        ->join('familydata', 'familtydata.oktazon', '=', 'masterdata.oktazon')
-        ->join('socialstatus', 'socialstatus.oktazon', '=', 'familydata.oktazon')
-        ->where('socialstatus.oktazon', '=', 'masterdata.oktazon', 'familydata.oktazon')
-        ->get();
-        
-        return $shares::all();*/
-
-        //return collect(masterdata::getStudents()familydata::getStudentsfamilydata());
     }
-    /*public function collection2()
-    {
-        return Familydata::all();
-    }*/
+    
     
 }

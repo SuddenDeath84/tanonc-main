@@ -51,7 +51,6 @@ Route::get('/familydataimport', [App\Http\Controllers\FamilydataController::clas
 //kir törzsadat  import
 Route::get('/masterdataimport', [App\Http\Controllers\MasterdataController::class, 'masterdata']);
 
-//[App\Http\Controllers\MasterdataController::class, 'masterdata']);
 
 //szociális import
 Route::get('/socialdataimport', [App\Http\Controllers\SocialdataController::class, 'socialdata']);
@@ -76,23 +75,17 @@ Route::get('/kirdatamanual', [App\Http\Controllers\KirdatamanualController::clas
 // Összes tanuló kilistázása
 Route::get('/uniquedataquery', [App\Http\Controllers\MasterdataController::class, 'student']);
 
-//Route::get('import-export', [UserImportExportController::class, 'importExport']);
 Route::get('export-file', [UserImportExportController::class, 'exportFile'])->name('export-file');
 Route::post('import-file', [UserImportExportController::class, 'importFile'])->name('import-file');
-
 
 
 // egyetlen tanuló adatainak lekérése az oktazon alapján
 Route::get('/studentedit/{oktazon}', [App\Http\Controllers\MasterdataController::class, 'studentedit']);
 
-//
 Route::post('/studentedit/{oktazon}', [App\Http\Controllers\MasterdataController::class, 'poststudentedit']);
 
 // egyetlen tanuló adatainak lekérése a vezetéknév alapján
 Route::get('/studentedit/{tanulonev}', [App\Http\Controllers\MasterdataController::class, 'studenteditname']);
-//minta
-//Route::get('/testuserdata', [App\Http\Controllers\UserController::class, 'testuserdata']);
-//Route::get('')
 
 
 Route::post('/studentquery', [App\Http\Controllers\MasterdataController::class, 'uniquedata']);

@@ -37,7 +37,7 @@ class Familydata extends Model
 
     //Primery Key
     public function Masterdata(){
-        // táblák összekapcsolása, először idegentábla, utána saját tábla
+        
         return $this->hasOne('App\Models\Masterdata','oktazon','oktazon');
     }
 

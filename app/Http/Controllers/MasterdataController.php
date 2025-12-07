@@ -66,10 +66,7 @@ class MasterdataController extends Controller
     // Keresés eredménye
     public function studentedit(Request $request)
     {
-        /*echo $request->oktazon;
-        echo $request->tanulonev;
-        die();*/
-        
+            
         $tanulok_res = Masterdata::select("*")->where('oktazon', $request->oktazon)->get();
         return view('studentedit')->with('diakok', $tanulok_res);
 
@@ -78,22 +75,14 @@ class MasterdataController extends Controller
     public function studenteditname(Request $request)
     {
         
-        /*echo $request->oktazon;
-        echo $request->tanulonev;
-        die();*/
-        
+                
         $tanulok_res = Masterdata::select("*")->where('viselt_nev_vezeteknev1', $request->tanulonev)->get();
         return view('studentedit')->with('diakok', $tanulok_res);
 
     }
 
     public function studentprofile(Request $request) {
-        //$user_id = Auth::user()->id;
- 
-        //$settl_res = Settlement::select("telepules")->orderBy("telepules")->get();
-        //$user_res = Userdata::where('user_id', $user_id)->get()->first();
-        //$country_res = Country::select('orszag')->orderBy("orszag")->get();
-        //$Birthplace_res = Settlement::select('telepules')->orderBy("telepules")->get();
+        
         $publicareatype_res = Publicareatype::select('kozterulet_tipus')->orderBy("kozterulet_tipus")->get();
 
         
@@ -102,10 +91,7 @@ class MasterdataController extends Controller
     // Tanuló update
     public function poststudentedit(Request $request)
     {
-        /*echo $request->oktazon;
-        echo $request->tanulonev;
-        die();*/
-        
+                
         // Tanuló azonosítása és az adatok behívása a Masterdata táblából oktazon alapján
         
         $tanulok_res = Masterdata::select("*")->where('oktazon', $request->oktazon)->get()->first();
@@ -175,7 +161,6 @@ class MasterdataController extends Controller
         $tanulok_family_res->covidoltas = $request->get('field_covidoltas');
 
         // Tanuló szociális adatainak módosítása
-
         
         $tanulok_social_res->gyermekvedelmikedvezmeny = $request->get('field_gyermekvedelmikedvezmeny');
         $tanulok_social_res->gyermekvedelmikedvezmeny_kezdete = $request->get('field_gyermekvedelmikedvezmeny_kezdete');
@@ -192,19 +177,14 @@ class MasterdataController extends Controller
         $tanulok_family_res->save();
         $tanulok_social_res->save();
 
-        //return view('studentedit')->with('diakok', $tanulok_res);
+        
         return redirect ('studentedit/'.$request->oktazon)->with('success_message','Az adatok módosítása sikeresen megtörtént');
     }
     public function studentremove(Request $request) {
-        //$user_id = Auth::user()->id;
- 
-        //$settl_res = Settlement::select("telepules")->orderBy("telepules")->get();
-        //$user_res = Userdata::where('user_id', $user_id)->get()->first();
-        //$country_res = Country::select('orszag')->orderBy("orszag")->get();
-        //$Birthplace_res = Settlement::select('telepules')->orderBy("telepules")->get();
+        
         $oktazon = $request->oktazon;
         Masterdata::select('delete from masterdata where oktazon = ?',[$oktazon]);
-        //$tanulok_res -> delete();
+        
 
         
         return redirect ('uniquedataquery')->with('success_message','Az adatok módosítása sikeresen megtörtént');

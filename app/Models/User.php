@@ -43,7 +43,7 @@ class User extends Authenticatable
     ];
 
     public function Userdata(){
-        return $this->hasOne('App\Models\Userdata','user_id','id');     // mihez kapcsolódik a model, idegen tábla, saját tábla azonosítója
+        return $this->hasOne('App\Models\Userdata','user_id','id');     
 
     }
 }

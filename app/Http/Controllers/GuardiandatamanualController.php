@@ -15,7 +15,7 @@ class GuardiandataManualController extends Controller
     {
         $this->middleware('auth');
     }
-//route-okban familydatamanual, új controller a route-ra, view-ra hivatkozni, .blade-et létrehozni rá,
+
     /**
      * Show the application dashboard.
      *

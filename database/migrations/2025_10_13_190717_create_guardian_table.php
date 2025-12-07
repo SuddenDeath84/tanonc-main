@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('guardian', function (Blueprint $table) {
             $table->increments('id')->index();
             $table->timestamps();
-            $table->integer('gondviseloazon');//->references('gondviseloazon')->on('Familydata');
+            $table->integer('gondviseloazon');
             $table->integer('oktazon')->index()->references('oktazon')->on('Masterdata');
             $table->string('telefonszam',20)->nullable();
             $table->string('email',50)->nullable();

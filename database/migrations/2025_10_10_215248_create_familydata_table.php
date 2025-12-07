@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('familydata', function (Blueprint $table) {
             $table->increments('id')->index();
             $table->integer('oktazon')->index()->references('oktazon')->on('Masterdata');
-            $table->integer('gondviseloazon');//->index()->references('gondviseloazon')->on('Guardian');
+            $table->integer('gondviseloazon');
             $table->string('gondviseloneve',50);
-            $table->string('gondviselotelefonszama',20)->nullable(); //+36301234567
+            $table->string('gondviselotelefonszama',20)->nullable();
             $table->string('gondviseloemail',40)->nullable();
             $table->string('torvenyeskepviselo',100);
             $table->string('haziorvosneve',50);

@@ -13,7 +13,7 @@ git pull origin production
 # Install composer dependencies
 composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
-# cache flush -  hogy ne forduljon elő hogy a változtatások 'beragadnak'..
+# cache flush -  
 php artisan clear-compiled
 
 # Cache flush

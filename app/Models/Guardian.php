@@ -20,12 +20,12 @@ class Guardian extends Model
     ];
 
 public function Masterdata(){
-    // táblák összekapcsolása, először idegentábla, utána saját tábla
+    
     return $this->hasOne('App\Models\Masterdata','oktazon','oktazon'); 
 }
 
 public function Familydata(){
-    // táblák összekapcsolása, először idegentábla, utána saját tábla
+    
     return $this->hasMany('App\Models\Familydata','gondviseloazon','gondviseloazon'); 
 }
 }

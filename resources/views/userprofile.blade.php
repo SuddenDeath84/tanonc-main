@@ -130,7 +130,7 @@
                             <label for="fieldUserCountry" class="col-4 col-form-label">Ország</label>
                             <div class="col-md-8">
                                 <div class="input-group">
-                                    <!-- <input type="text" class="form-control @error('fieldUserCountry') is-invalid @enderror" name="fieldUserCountry" value="{{ isset($userdata->orszag) ? $userdata->orszag : '' }}" pattern="^.{0,30}$" placeholder="ország"> -->
+                                    
                                     <select class="form-select" name="fieldUserCountry">
                                         @foreach($countries as $key => $country)
                                             <option value="{{isset($country->orszag) ? $country->orszag : ''}}" {{ isset($userdata->orszag) && $userdata->orszag == $country->orszag ? 'selected' : '' }}> {{$country->orszag}}</option>
@@ -163,7 +163,7 @@
                             <label for="fieldUserCity" class="col-4 col-form-label">Település</label>
                             <div class="col-md-8">
                                 <div class="input-group">
-                                    <!--<input type="text" class="form-control" name="fieldUserCity" value="{{ isset($userdata->telepules) ? $userdata->telepules : '' }}" pattern="^.{0,30}$" required>-->
+                                    
                                     <select class="form-select" name="fieldUserCity" id="fieldUserCity">
                                         @foreach($settlements as $key => $settlement)
                                             <option value="{{isset($settlement->telepules) ? $settlement->telepules : ''}}" {{ isset($userdata->telepules) && $userdata->telepules == $settlement->telepules ? 'selected' : '' }}> {{$settlement->telepules}}</option>
@@ -261,7 +261,7 @@
                             <label for="fieldUserBirthPlace" class="col-4 col-form-label">Születési hely</label>
                             <div class="col-md-8">
                                 <div class="input-group">
-                                   <!-- <input type="text" class="form-control @error('fieldUserBirthPlace') is-invalid @enderror" name="fieldUserBirthPlace" value="{{ isset($userdata->szuletesi_hely) ? $userdata->szuletesi_hely : '' }}" pattern="^.{0,30}$" placeholder="születési hely"> -->
+                                   
                                    <select class="form-select" name="fieldUserBirthPlace">
                                         @foreach($birthplaces as $key => $birthplace)
                                             <option value="{{isset($birthplace->telepules) ? $birthplace->telepules : ''}}" {{ isset($userdata->szuletesi_hely) && $userdata->szuletesi_hely == $birthplace->telepules ? 'selected' : '' }}> {{$birthplace->telepules}}</option>

@@ -34,7 +34,7 @@ class UserController extends Controller
 
         return view('users')->with('fhk', $felhasznalok);
     }
-    /*****************************************USER PROFILE*******************************/
+    
 
     public function userprofile() {
         $user_id = Auth::user()->id;
@@ -50,7 +50,7 @@ class UserController extends Controller
     }
 
     public function testuserdata(){
-        print('userdatatest');          // képernyő ellenőrzése
+        print('userdatatest');          
 
         $nev = explode(' ', Auth::user()->name, 2);
 
@@ -89,7 +89,7 @@ class UserController extends Controller
         $user_res = Userdata::firstOrNew(['user_id' => Auth::user()->id]);
 
         $user_res->user_id = Auth::user()->id;
-        //$user_res->vezeteknev = (null !== $request->get('fieldUserSureName') ? $request->get('fieldUserSureName') : NULL);
+        
         $user_res->vezeteknev = $request->get('fieldUserSureName');
         $user_res->keresztnev1 = $request->get('fieldUserFirstName');
         $user_res->keresztnev2 = (null !== $request->get('fieldUserFirstName2') ? $request->get('fieldUserFirstName2') : "");
@@ -112,7 +112,6 @@ class UserController extends Controller
         return redirect ('/userprofile')->with('success_message','Rögzítés sikeresen megtörtént!');
     }
 
-    /*******************************PASSWORD CHANGE************************************/
     // Jelszó cseréje
     public function changepassword()
     {
@@ -148,8 +147,7 @@ class UserController extends Controller
 
         return back()->with("status", "A módosítás sikeres!");
 
-        /************************************************************************************/
-
+        
     }
 
     public function getsettlements(Request $request) {

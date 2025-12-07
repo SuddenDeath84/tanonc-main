@@ -36,7 +36,7 @@
                                     </td>
                                     <td class="col-md-2" style="text-align: left">
                                             <p><b>Létrehozva:  </b><br>{{$tanulo->created_at}}</p>
-                                            <!-- <p><b>Módosítva:   </b><br>{{$tanulo->updated_at}}</p> -->
+                                            
                                         
                                         
                                     </td>
@@ -45,7 +45,7 @@
                                             <button type="submit" class="btn btn-sm btn-primary mb-5 mt-4 me-4">
                                                 <i class="fa-btn fa-solid fa-floppy-disk"></i>Módosítás
                                             </button>
-                                            <!-- <a href="{{url('/studentedit')}}"></a> -->
+                                            
                                         
                                     </td>
                                 </tr>
@@ -62,10 +62,7 @@
                                     <strong>{{ Session::get('success_message') }}</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
-                      <!--      <button type="submit" class="btn btn-sm btn-primary mb-5 mt-4 me-4">
-                                <i class="fa-btn fa-solid fa-floppy-disk"></i>Módosítás
-                            </button>
-                        -->         
+                               
                           
                             @endif
                             <div class="table-responsive">
@@ -568,12 +565,3 @@
     </div>
 </div>
 @endsection
-<!--
-<tr>
-    <td style="vertical-align: left">{{$tanulo->oktazon}}</td>
-    <td style="vertical-align: left">{{$tanulo->viselt_nev_vezeteknev1}} {{$tanulo->viselt_nev_keresztnev2}}</td>
-    <td style="vertical-align: middle"><a href= "{{  url('studentedit/'.$tanulo->oktazon)}}"><button class="btn btn-sm btn-primary"><i class="fa-fw fa-solid fa-pen-to-square"></i></button></a>
-    
-       
-<tr>
--->

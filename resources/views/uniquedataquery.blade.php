@@ -28,22 +28,12 @@
                                     <span class="input-group-text"><button type="submit" class="btn btn-sm noborder"><i class="fa-fw fa-sharp fa-solid fa-magnifying-glass"></i></button></span>
                                     
                                 </div>
-                                <!-- <span style="text-align: right"><a href="{{ url('/uniquedataquery') }}"><button type="button" class="btn btn-primary">Mindent mutat</button></a></span> -->
+                                
                             </form>
                             
                         </div>
                         <p></p>
-                        <!--Keresés név alapján
-                        <div class="col-md-4">
-                            <form action="/studentquery" method="post">
-                            @csrf
-                            <div class="input-group">
-                                <input class="form-control" type="search" name="tanulonev" placeholder="Keresés név alapján">&nbsp;
-                                <span class="input-group-text"><button type="submit" class="btn btn-sm noborder"><i class="fa-fw fa-sharp fa-solid fa-magnifying-glass"></i></button></span>
-                            </div>
-                        </form>
-                        </div>
-                         -->
+                        
                     </div>
                     
                     <p><hr /></p>

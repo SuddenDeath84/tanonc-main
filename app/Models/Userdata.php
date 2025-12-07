@@ -22,6 +22,6 @@ class Userdata extends Model
     ];
 
     public function user(){
-        return $this->hasOne('App\Models\User','id','user_id');         // mihez kapcsolódik a model, idegen tábla, saját tábla azonosítója
+        return $this->hasOne('App\Models\User','id','user_id');         
     }
 }

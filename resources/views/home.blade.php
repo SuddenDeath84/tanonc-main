@@ -31,19 +31,19 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/thought-catalog-505eectW54k-unsplash.jpg" class="d-block w-100">
+      <img src="img/bg1.jpg" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg" class="d-block w-100">
+      <img src="img/bg2.jpg" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="img/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg" class="d-block w-100">
+      <img src="img/bg3.jpg" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="img/brooke-cagle--uHVRvDr7pg-unsplash.jpg" class="d-block w-100">
+      <img src="img/bg4.jpg" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg" class="d-block w-100">
+      <img src="img/kav63x.jpg" class="d-block w-100">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

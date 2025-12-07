@@ -11,7 +11,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()                                        // fizikai művelet, a userdata tábla létrehozása a szerveren
+    public function up()
     {
         Schema::create('userdata', function (Blueprint $table) {
             $table->increments('id')->index();
@@ -41,7 +41,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()                                        // fizikai művelet, a userdata tábla eldobása a szerveren, ha létezik
+    public function down()                                        
     {
         Schema::dropIfExists('userdata');
     }

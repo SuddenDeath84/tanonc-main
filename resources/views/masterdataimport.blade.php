@@ -41,6 +41,4 @@
 
 
 
-                <!-- <input class="form-control form-control-sm" id="formFileSm" type="file" /> -->
-                <!-- <label for="formFileLg" class="form-label">Kérem válassza ki a feltölteni kívánt fájlt</label>-->
-                <!-- <input class="form-control form-control-lg" id="formFileLg" type="file" />-->
+                
